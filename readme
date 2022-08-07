@@ -1,8 +1,10 @@
-Barak Golan 31317030
-Ofek Markus 318418423
+@author Barak Golan 
+the project is console appliction that can retrieve and fetch data about stocks
+using 2 docker containers that implement UI container and engine container 
+the project linkage with Json-c and libzip open-source libraries
+https://hub.docker.com/repository/docker/barakg43/stock_fetcher
 
 
-Downloading images via...
-
+To test and run follow instructions
 Instructions:
 run runContainers.sh script
