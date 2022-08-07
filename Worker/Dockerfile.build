@@ -1,0 +1,14 @@
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get install -y libjson-c-dev libzip-dev wget
+
+RUN mkdir /pipes/
+RUN mkdir /worker_files
+COPY bin/workerProcess.o /worker_files
+
+COPY getdata.sh /worker_files/
+WORKDIR /worker_files/
+CMD ["/worker_files/workerProcess.o"]
+
+
+

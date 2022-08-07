@@ -1,0 +1,54 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+
+
+        {
+          "name": "GCC++ Launch ",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${fileDirname}/bin/${fileBasenameNoExtension}.o",
+          "args":[
+            "aapl",
+            "ibm",
+            "googl",
+            "fb",
+          ],
+          "stopAtEntry": false,
+          "cwd": "${fileDirname}",
+          "environment": [],
+          "MIMode": "gdb",
+          "externalConsole": false,
+          "setupCommands": [
+              {
+                  "description": "Enable pretty-printing for gbd",
+                  "text": "enable pretty-printer",
+                  "ignoreFailures": false
+
+
+              },
+              {
+                "description": "follow child proccess",
+                "text": "set follow-fork-mode child",
+                "ignoreFailures": false
+
+              }
+          ],
+
+
+          "preLaunchTask": "C/C++: cpp build active file",
+          "miDebuggerPath": "/usr/bin/gdb"
+          // "logging": {
+          //   "moduleLoad": false,
+          //   "trace": true
+          // },
+
+          /* "visualizerFile": "${workspaceFolder}/my.natvis",
+          "showDisplayString": true*/
+        }
+
+
+  ],
+  "compounds": []
+}

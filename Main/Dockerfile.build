@@ -1,0 +1,9 @@
+FROM ubuntu:20.04
+
+RUN apt-get update
+
+RUN mkdir /pipes/
+RUN mkdir /main_files/
+COPY ./bin/main.o /main_files/
+
+CMD ["/main_files/main.o"]
